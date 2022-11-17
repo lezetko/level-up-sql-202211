@@ -2,3 +2,8 @@
 
 -- The customer 'atapley2j@kinetecoinc.com' will be in
 -- attendance, and will bring 3 friends.
+INSERT INTO RSVP_Anniversary (Cust_ID, Party_Nbr)
+VALUES ((SELECT CustomerID
+        FROM Customers
+        WHERE Email = 'atapley2j@kinetecoinc.com')
+        , 3)
